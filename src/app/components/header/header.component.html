@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="header_container">
+        <div class="logo" routerLink="/">
+            ShopIt
+        </div>
+        <div class="search_container">
+            <input type="text" name="search" id="search" class="search_bar">
+        </div>
+        <div class="menu_container">
+            <div class="menu_icon_container">
+                <i class="bi bi-cart4 icon"></i>&nbsp;Cart
+            </div>
+            <div class="menu_icon_container"[matMenuTriggerFor]="user_menu" (click)="open_menu()">
+                <i class="bi bi-person-circle icon" ></i>&nbsp;Narayana
+            </div>
+            <mat-menu class="user_menu" #user_menu="matMenu" yPosition="above" xPosition="before">
+                <p mat-menu-item routerLink="/account">My Account</p>
+                <p mat-menu-item routerLink="/orders">Orders</p>
+                <p mat-menu-item routerLink="/settings">Settings</p>
+                <p mat-menu-item routerLink="/signout">Sign Out</p>
+            </mat-menu>
+            <div *ngIf="false" class="menu_icon_container">
+                <button class="btn_style_1">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
